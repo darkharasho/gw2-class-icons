@@ -6,6 +6,7 @@
     "bump:version": "bash scripts/bump-version.sh",
     "zip:wiki": "bash scripts/zip-wiki.sh",
     "resize:150px": "bash scripts/resize-150px.sh",
-    "resize:40px": "bash scripts/resize-40px.sh"
+    "resize:40px": "bash scripts/resize-40px.sh",
+    "resize:20px": "bash scripts/resize-20px.sh"
   }
 }
