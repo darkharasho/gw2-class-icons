@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "bump:version": "bash scripts/bump-version.sh",
     "zip:wiki": "bash scripts/zip-wiki.sh",
     "resize:150px": "bash scripts/resize-150px.sh"
   }
