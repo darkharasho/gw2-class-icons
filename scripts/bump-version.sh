@@ -31,7 +31,7 @@ if [[ -z "$new_version" ]]; then
         max_suffix="$suffix"
       fi
     fi
-  done < <(perl -nle 'while(/\\?v=20260205-2)/g){print $1}' "${files[@]}" | sort -u)
+  done < <(perl -nle 'while(/\\?v=([0-9]{8}-[0-9]+)/g){print $1}' "${files[@]}" | sort -u)
 
   if (( max_suffix > 0 )); then
     new_version="$today-$((max_suffix + 1))"
@@ -46,7 +46,7 @@ if [[ $dry_run -eq 1 ]]; then
 fi
 
 for file in "${files[@]}"; do
-  perl -pi -e "s/\\?v=20260205-2)\"']+/?v=20260205-2" "$file"
+  perl -pi -e "s/\\?v=[^\\s)\"']+/?v=${new_version}/g" "$file"
 done
 
 echo "bumped ?v= to ${new_version} in ${#files[@]} file(s)"
