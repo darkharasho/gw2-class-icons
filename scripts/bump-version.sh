@@ -14,6 +14,12 @@ if [[ ${#files[@]} -eq 0 ]]; then
   exit 1
 fi
 
+dry_run=0
+if [[ "${1-}" == "--dry-run" ]]; then
+  dry_run=1
+  shift
+fi
+
 new_version="${1-}"
 if [[ -z "$new_version" ]]; then
   today="$(date +%Y%m%d)"
@@ -25,7 +31,7 @@ if [[ -z "$new_version" ]]; then
         max_suffix="$suffix"
       fi
     fi
-  done < <(rg -o -N "\\?v=([0-9]{8}-[0-9]+)" -r '$1' "${files[@]}" | sort -u)
+  done < <(perl -nle 'while(/\\?v=20260205-2)/g){print $1}' "${files[@]}" | sort -u)
 
   if (( max_suffix > 0 )); then
     new_version="$today-$((max_suffix + 1))"
@@ -34,8 +40,13 @@ if [[ -z "$new_version" ]]; then
   fi
 fi
 
+if [[ $dry_run -eq 1 ]]; then
+  echo "dry run: would bump ?v= to ${new_version} in ${#files[@]} file(s)"
+  exit 0
+fi
+
 for file in "${files[@]}"; do
-  perl -pi -e "s/\\?v=[^\\s)\"']+/?v=${new_version}/g" "$file"
+  perl -pi -e "s/\\?v=20260205-2)\"']+/?v=20260205-2" "$file"
 done
 
 echo "bumped ?v= to ${new_version} in ${#files[@]} file(s)"
