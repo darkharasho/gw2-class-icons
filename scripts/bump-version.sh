@@ -25,7 +25,7 @@ if [[ -z "$new_version" ]]; then
         max_suffix="$suffix"
       fi
     fi
-  done < <(rg -o -N "\\?v=20260205-1)" -r '$1' "${files[@]}" | sort -u)
+  done < <(rg -o -N "\\?v=([0-9]{8}-[0-9]+)" -r '$1' "${files[@]}" | sort -u)
 
   if (( max_suffix > 0 )); then
     new_version="$today-$((max_suffix + 1))"
@@ -35,7 +35,7 @@ if [[ -z "$new_version" ]]; then
 fi
 
 for file in "${files[@]}"; do
-  perl -pi -e "s/\\?v=20260205-1)\"']+/?v=20260205-1" "$file"
+  perl -pi -e "s/\\?v=[^\\s)\"']+/?v=${new_version}/g" "$file"
 done
 
 echo "bumped ?v= to ${new_version} in ${#files[@]} file(s)"
