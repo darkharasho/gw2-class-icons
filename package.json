@@ -1,0 +1,9 @@
+{
+  "name": "gw2-class-icons",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "zip:wiki": "bash scripts/zip-wiki.sh",
+    "resize:150px": "bash scripts/resize-150px.sh"
+  }
+}
