@@ -26,7 +26,7 @@ This repository provides optimized and enhanced Guild Wars 2 (GW2) wiki class ic
 **Credits & License**
 - Icons originate from the GW2 wiki; respect the original wiki licensing and attribution requirements.
 - This repository is intended to redistribute optimized builds for convenience — include attribution where required and follow the wiki's license terms.
-- Legal disclosure: Guild Wars 2, ArenaNet, and all associated graphics and images are the property of ArenaNet, LLC. All rights are owned by ArenaNet, LLC. This project is a community convenience resource and is not affiliated with or endorsed by ArenaNet.
+- Legal disclosure: © ArenaNet LLC. All rights reserved. NCSOFT, ArenaNet, Guild Wars, Guild Wars 2, GW2, Heart of Thorns, Path of Fire, End of Dragons, Secrets of the Obscure, Janthir Wilds, Visions of Eternity, and all associated logos, designs, and composite marks are trademarks or registered trademarks of NCSOFT Corporation. All other trademarks are the property of their respective owners.
 
 **Class Icon Table**
 | class | Raw (20px) | Optimized (40px) | Enhanced (150px+) |
