@@ -2,6 +2,17 @@
 
 This project uses npm scripts as wrappers around shell scripts in `scripts/`.
 
+## Quick Commands
+
+- `npm run build:icons` - Full pipeline: SVG -> high-res PNG -> 150px/40px/20px
+- `npm run convert:svg` - Convert SVG files to PNG in `wiki/high-res/`
+- `npm run resize:150px` - Build `wiki/150px/` from `wiki/high-res/`
+- `npm run resize:40px` - Build `wiki/40px/` from `wiki/high-res/`
+- `npm run resize:20px` - Build `wiki/20px/` from `wiki/high-res/`
+- `npm run convert:srgb` - Replace `#0e0e0b` with `#000000` in PNG files
+- `npm run zip:wiki` - Zip each `wiki/` subfolder into `release/`
+- `npm run bump:version -- [new-version]` - Update `?v=` query versions
+
 ## Prerequisites
 
 - Node.js + npm
