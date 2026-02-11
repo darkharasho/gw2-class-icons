@@ -8,6 +8,8 @@
     "resize:150px": "bash scripts/resize-150px.sh",
     "resize:40px": "bash scripts/resize-40px.sh",
     "resize:20px": "bash scripts/resize-20px.sh",
-    "convert:srgb": "bash scripts/convert-to-srgb.sh"
+    "convert:srgb": "bash scripts/convert-to-srgb.sh",
+    "convert:svg": "bash scripts/convert-svg-to-png.sh",
+    "build:icons": "bash scripts/convert-and-resize.sh"
   }
 }
