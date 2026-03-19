@@ -1,6 +1,6 @@
 {
   "name": "gw2-class-icons",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Guild Wars 2 class icons as npm assets with path helpers.",
   "private": false,
   "type": "commonjs",
