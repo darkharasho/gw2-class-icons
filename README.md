@@ -15,6 +15,34 @@ This repository provides optimized and enhanced Guild Wars 2 (GW2) wiki class ic
 - These icons are provided as-is for free usage within the bounds of the original rights holders.
 - Not intended for monetary use or redistribution.
 
+**npm package**
+
+```bash
+npm install gw2-class-icons
+```
+
+```js
+const { getIconPath, hasIcon, iconNames, iconSizes } = require("gw2-class-icons");
+
+const guardian40 = getIconPath("Guardian", "40px");
+// => "wiki/40px/Guardian.png"
+
+const guardianAbsolute = getIconPath("Guardian", "40px", { absolute: true });
+// => "/.../node_modules/gw2-class-icons/wiki/40px/Guardian.png"
+
+const exists = hasIcon("Guardian", "svg");
+// => true
+```
+
+You can also reference files directly from the package:
+
+- `gw2-class-icons/wiki/20px/Guardian.png`
+- `gw2-class-icons/wiki/40px/Guardian.png`
+- `gw2-class-icons/wiki/150px/Guardian.png`
+- `gw2-class-icons/wiki/high-res/Guardian.png`
+- `gw2-class-icons/wiki/raw/Guardian.png`
+- `gw2-class-icons/wiki/svg/Guardian.svg`
+
 **Optimization notes**
 - Images are optimized to preserve visual fidelity while minimizing bytes. Formats include PNG (lossless) and optionally WebP for modern apps.
 - Keep transparency intact for overlay use in UIs and messaging apps.

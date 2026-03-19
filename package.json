@@ -1,7 +1,42 @@
 {
   "name": "gw2-class-icons",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.2.0",
+  "description": "Guild Wars 2 class icons as npm assets with path helpers.",
+  "private": false,
+  "type": "commonjs",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "wiki/20px/**/*.png",
+    "wiki/40px/**/*.png",
+    "wiki/150px/**/*.png",
+    "wiki/high-res/**/*.png",
+    "wiki/optimized/**/*.png",
+    "wiki/raw/**/*.png",
+    "wiki/svg/**/*.svg",
+    "weapons/svg/**/*.svg",
+    "README.md",
+    "HOW_TO.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darkharasho/gw2-class-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/darkharasho/gw2-class-icons/issues"
+  },
+  "homepage": "https://github.com/darkharasho/gw2-class-icons#readme",
+  "keywords": [
+    "guild-wars-2",
+    "gw2",
+    "icons",
+    "assets",
+    "png",
+    "svg"
+  ],
+  "license": "UNLICENSED",
   "scripts": {
     "bump:version": "bash scripts/bump-version.sh",
     "zip:wiki": "bash scripts/zip-wiki.sh",
